@@ -15,7 +15,7 @@ public class CustomerService {
 
     public List<Customer> getAll() throws SQLException {
         Connection connection = ConnectionPool.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM customer order by name DESC");
+        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM customer order by name ASC");
         ResultSet resultSet = preparedStatement.executeQuery();
         List<Customer> customers = new ArrayList<>();
         while (resultSet.next()){

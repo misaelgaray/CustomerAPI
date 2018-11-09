@@ -14,9 +14,9 @@ public class ConnectionPool {
     static {
         dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://162.241.224.158:3306/misaelga_customersdb");
-        dataSource.setUsername("misaelga_dummy");
-        dataSource.setPassword("alaska666");
+        dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/customerdb");
+        dataSource.setUsername("root");
+        dataSource.setPassword("");
         dataSource.setMinIdle(5);
         dataSource.setMaxIdle(15);
         dataSource.setMaxOpenPreparedStatements(100);
